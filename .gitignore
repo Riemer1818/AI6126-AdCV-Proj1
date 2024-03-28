@@ -1,0 +1,12 @@
+# Ignore standard files for ML project
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Ignore everything within ./content
+/content/*

@@ -1,0 +1,153 @@
+\documentclass{article}
+
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage{thmtools}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{framed}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tcolorbox}
+\usepackage{textcomp}
+
+\colorlet{LightGray}{White!90!Periwinkle}
+\colorlet{LightOrange}{Orange!15}
+\colorlet{LightGreen}{Green!15}
+
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+
+\declaretheoremstyle[name=Theorem,]{thmsty}
+\declaretheorem[style=thmsty,numberwithin=section]{theorem}
+\tcolorboxenvironment{theorem}{colback=LightGray}
+
+\declaretheoremstyle[name=Proposition,]{prosty}
+\declaretheorem[style=prosty,numberlike=theorem]{proposition}
+\tcolorboxenvironment{proposition}{colback=LightOrange}
+
+\declaretheoremstyle[name=Principle,]{prcpsty}
+\declaretheorem[style=prcpsty,numberlike=theorem]{principle}
+\tcolorboxenvironment{principle}{colback=LightGreen}
+
+\setstretch{1.2}
+\geometry{
+    textheight=9in,
+    textwidth=5.5in,
+    top=1in,
+    headheight=12pt,
+    headsep=25pt,
+    footskip=30pt
+}
+
+\begin{document}
+
+\title{ \normalsize \textsc{}
+		\\ [2.0cm]
+		\HRule{1.5pt} \\
+		\LARGE \textbf{\uppercase{Fashion Attributes Classification and Sentiment Analysis: A Deep Learning Approach}
+		\HRule{2.0pt} \\ [0.6cm] \LARGE{AI6127 Deep Natural Language Processing} \vspace*{5\baselineskip}}
+		}
+\date{2024 - March - 12}
+\author{\textbf{Riemer van der Vliet} \\ 
+		G2304212K}
+
+\maketitle
+\newpage
+
+\section{Introduction}
+
+This report presents a comprehensive study on two major projects: the Fashion Attributes Classification Challenge and sentiment classification using the iMDB dataset. The former is an individual project aimed at identifying attribute labels depicted in fashion photographs using a dataset of 6000 images, while the latter explores sentiment classification through the application of Vision Transformers (ViT) and fine-tuning techniques using the Optuna framework.
+
+\subsection{Description of data}
+
+The Fashion Attributes Classification Challenge utilizes a dataset with 6000 images, divided into 5000 images for training and 1000 for validation. The dataset employs 26 attribute labels across 6 major categories, presenting a multi-label classification problem.
+
+The sentiment classification project explores the use of the iMDB dataset, a benchmark dataset in natural language processing for sentiment analysis, through advanced vision-based models, demonstrating the adaptability of vision transformers beyond traditional image tasks.
+
+\subsection{Description of model}
+
+\subsubsection{ViT}
+
+The ViT model represents a shift from conventional convolutional neural networks to transformers applied to sequences of image patches for classification tasks. Its application in the sentiment classification project underscores the versatility and robustness of transformers in handling diverse data types. Within this architecture some of the final encoder layers, which have architecture as seen in figure \ref{fig:encoderArchitecture} have been unfrozen. 
+
+\subsubsection{Weight regularization}
+Because we work with a very uneven dataset I have opted to regularize and normalize for the within class differences 
+-> need plot of the differences in relative abundance.
+
+\subsubsection{MultiTaskHead}
+
+The MultiTaskHead module is designed to output predictions for multiple attribute labels simultaneously. This approach is crucial for the Fashion Attributes Classification Challenge, allowing for efficient and effective multi-label classification. 
+
+\subsubsection{Optuna}
+
+Optuna is an optimization framework used to fine-tune hyperparameters for deep learning models. In our study, it played a significant role in optimizing the learning rate and the number of layers to unfreeze in the ViT model, leading to improved performance on the sentiment classification task.
+
+
+During the training the metric for accuracy is decided on pergroupAverage * totalAccurate as to insentivise Optuna to take both of these into account 
+
+\section{Results}
+
+The implementation of the ViT model with a custom MultiTaskHead and the application of Optuna for hyperparameter tuning yielded promising results in both projects. In the Fashion Attributes Classification Challenge, \textbf{the model achieved competitive accuracy}, demonstrating the effectiveness of transformers in complex multi-label classification tasks. Similarly, the sentiment classification project saw notable
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth{imgs/Validation_loss3.png}]
+    \caption{Validation loss during training}
+    \label{fig:ValidationLoss}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth{./imgs/Training_loss3.png}]
+    \caption{Training loss during training}
+    \label{fig:TrainingLoss}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth{./imgs/Average_accuracy.png}]
+    \caption{Average accuracy during training}
+    \label{fig:AverageAccuracy}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth{./imgs/Total_accuracy.png}]
+    \caption{Total accuracy during training}
+    \label{fig:TotalAccuracy}
+\end{figure}
+\section{Bibliography}
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{References.bib}
+no external sources have been used that need to be cited. 
+
+\end{document}
+
+% \begin{theorem}
+%     This is a theorem.
+% \end{theorem}
+
+% \begin{proposition}
+%     This is a proposition.
+% \end{proposition}
+
+% \begin{principle}
+%     This is a principle.
+% \end{principle}
+
+% Maybe I need to add one more part: Examples.
+% Set style and colour later.
+
+
+% \subsection{Citation}
+
+% This is a citation\cite{Eg}.
+
+% \newpage
