@@ -239,6 +239,8 @@ def train(LAYERS_TO_UNFREEZE=1, EPOCHS=20, BATCH_SIZE=32, LR=0.0003, DROPOUT_RAT
     relative_abundances = torch.tensor(count_abundances()).to(device)
 
     model = MultiTaskPretrained(LAYERS_TO_UNFREEZE, DROPOUT_RATE)
+    print(model)
+    
     model.to(device)
 
     train_losses = []

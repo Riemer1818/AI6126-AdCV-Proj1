@@ -1,5 +1,6 @@
 import os
 import numpy as np
+import itertools
 
 import matplotlib.pyplot as plt
 
@@ -22,27 +23,32 @@ def load_metrics(directory):
 
 def plot_metrics(metrics_dict):
     """
-    Plot metrics from all models, ensuring consistent coloring for each metric.
+    Plot metrics from all models, using different line styles (solid, dashed, etc.) for each model within each metric plot.
+    All plots will be in black and white.
     """
-    colors = {'train_loss': 'r', 'val_loss': 'b', 'avg_class_acc': 'g', 'total_acc': 'orange'}
     labels = {'train_loss': 'Training Loss', 'val_loss': 'Validation Loss', 
               'avg_class_acc': 'Average Class Accuracy', 'total_acc': 'Total Accuracy'}
+    
+    # Line styles to differentiate models. Add more styles if you have more than four models.
+    line_styles = ['-', '--', '-.', ':']
     
     # Determine number of epochs based on the length of the first encountered metric for proper X-axis scaling
     num_epochs = next(iter(next(iter(metrics_dict.values())).values())).shape[0]
     epochs = np.arange(1, num_epochs + 1)
 
-    for metric_name, color in colors.items():
+    for metric_name in labels.keys():
         plt.figure()  # Create a new plot for each metric
-        for model_name, metrics in metrics_dict.items():
+        for idx, (model_name, metrics) in enumerate(metrics_dict.items()):
             if metric_name in metrics:
-                plt.plot(epochs, metrics[metric_name], color=color, label=f"{labels[metric_name]} ({model_name})", alpha=0.7)
+                # Cycle through line styles based on model index
+                line_style = line_styles[idx % len(line_styles)]
+                plt.plot(epochs, metrics[metric_name], line_style, label=f"{labels[metric_name]} ({model_name})", alpha=0.7)
         plt.xlabel("Epochs")
         plt.ylabel("Metrics")
         plt.title(f"{labels[metric_name]}")
         plt.legend()
         plt.tight_layout()  # Adjust layout to not cut off labels
-        # don't show just save
+        # Don't show just save
         plt.savefig(f'{metric_name}.png')
         # plt.show()
 

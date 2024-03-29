@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.19)  28 MAR 2024 18:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.19)  29 MAR 2024 18:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -633,59 +633,83 @@ Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 (/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 )
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count304
+\lst@gtempboxa=\box69
+\lst@token=\toks48
+\lst@length=\count305
+\lst@currlwidth=\dimen262
+\lst@column=\count306
+\lst@pos=\count307
+\lst@lostspace=\dimen263
+\lst@width=\dimen264
+\lst@newlines=\count308
+\lst@lineno=\count309
+\lst@maxwidth=\dimen265
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count310
+\lst@skipnumbers=\count311
+\lst@framebox=\box70
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
 Package thmtools Info: Key `name' (with value `Theorem')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=thmsty' on input line 23.
-\c@theorem=\count304
+(thmtools)             that uses `style=thmsty' on input line 24.
+\c@theorem=\count312
 Package thmtools Info: Key `name' (with value `Proposition')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=prosty' on input line 27.
+(thmtools)             that uses `style=prosty' on input line 28.
 Package thmtools Info: Key `name' (with value `Principle')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=prcpsty' on input line 31.
+(thmtools)             that uses `style=prcpsty' on input line 32.
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count305
-\l__pdf_internal_box=\box69
+\l__color_backend_stack_int=\count313
+\l__pdf_internal_box=\box71
 )
-No file main.aux.
+(./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count306
-\scratchdimen=\dimen262
-\scratchbox=\box70
-\nofMPsegments=\count307
-\nofMParguments=\count308
-\everyMPshowfont=\toks48
-\MPscratchCnt=\count309
-\MPscratchDim=\dimen263
-\MPnumerator=\count310
-\makeMPintoPDFobject=\count311
-\everyMPtoPDFconversion=\toks49
+\scratchcounter=\count314
+\scratchdimen=\dimen266
+\scratchbox=\box72
+\nofMPsegments=\count315
+\nofMParguments=\count316
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count317
+\MPscratchDim=\dimen267
+\MPnumerator=\count318
+\makeMPintoPDFobject=\count319
+\everyMPtoPDFconversion=\toks50
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -729,7 +753,7 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 45.
+Package hyperref Info: Link coloring OFF on input line 46.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -739,21 +763,24 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count312
+\c@section@level=\count320
 )
-LaTeX Info: Redefining \ref on input line 45.
-LaTeX Info: Redefining \pageref on input line 45.
-LaTeX Info: Redefining \nameref on input line 45.
+LaTeX Info: Redefining \ref on input line 46.
+LaTeX Info: Redefining \pageref on input line 46.
+LaTeX Info: Redefining \nameref on input line 46.
+
+(./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 58.
+\c@lstlisting=\count321
+LaTeX Font Info:    Trying to load font information for U+msa on input line 59.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 58.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 59.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -761,41 +788,106 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<imgs/00000.jpg, id=60, 200.75pt x 301.125pt>
+File: imgs/00000.jpg Graphic file (type jpg)
+<use imgs/00000.jpg>
+Package pdftex.def Info: imgs/00000.jpg  used on input line 75.
+(pdftex.def)             Requested size: 79.49577pt x 119.24402pt.
+<imgs/00001.jpg, id=61, 301.125pt x 251.94125pt>
+File: imgs/00001.jpg Graphic file (type jpg)
+<use imgs/00001.jpg>
+Package pdftex.def Info: imgs/00001.jpg  used on input line 80.
+(pdftex.def)             Requested size: 79.49577pt x 66.51038pt.
+<imgs/00002.jpg, id=62, 236.885pt x 301.125pt>
+File: imgs/00002.jpg Graphic file (type jpg)
+<use imgs/00002.jpg>
+Package pdftex.def Info: imgs/00002.jpg  used on input line 85.
+(pdftex.def)             Requested size: 79.49577pt x 101.05324pt.
+<imgs/00003.jpg, id=63, 199.74625pt x 302.12875pt>
+File: imgs/00003.jpg Graphic file (type jpg)
+<use imgs/00003.jpg>
+Package pdftex.def Info: imgs/00003.jpg  used on input line 90.
+(pdftex.def)             Requested size: 79.49577pt x 120.24081pt.
 
-LaTeX Warning: Reference `fig:encoderArchitecture' on page 2 undefined on input
- line 74.
+Overfull \hbox (25.4602pt too wide) in paragraph at lines 96--98
+\OT1/cmr/m/n/10 ized with a sim-ple trans-former as can be seen in the code in 
+[the Python code](./code/finalCode.py)
+ []
 
-[2]
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) [2 <./imgs/00000.jpg> <./imgs/00001.jpg> <./imgs/00002.jpg> <./imgs/00003.jpg
+>]
+<imgs/distribution.png, id=82, 462.528pt x 346.896pt>
+File: imgs/distribution.png Graphic file (type png)
+<use imgs/distribution.png>
+Package pdftex.def Info: imgs/distribution.png  used on input line 118.
+(pdftex.def)             Requested size: 317.9892pt x 238.50099pt.
+ [3 <./imgs/distribution.png>]
+Overfull \hbox (199.2678pt too wide) in paragraph at lines 151--162
+ [][] 
+ []
+
+<imgs/long_train_loss.png, id=95, 462.528pt x 346.896pt>
+File: imgs/long_train_loss.png Graphic file (type png)
+<use imgs/long_train_loss.png>
+Package pdftex.def Info: imgs/long_train_loss.png  used on input line 170.
+(pdftex.def)             Requested size: 178.8678pt x 142.26532pt.
+<imgs/short_train_loss.png, id=96, 462.528pt x 346.896pt>
+File: imgs/short_train_loss.png Graphic file (type png)
+<use imgs/short_train_loss.png>
+Package pdftex.def Info: imgs/short_train_loss.png  used on input line 177.
+(pdftex.def)             Requested size: 178.8678pt x 142.26532pt.
+[4]
+<imgs/Validation_loss3.png, id=105, 462.528pt x 346.896pt>
+File: imgs/Validation_loss3.png Graphic file (type png)
+<use imgs/Validation_loss3.png>
+Package pdftex.def Info: imgs/Validation_loss3.png  used on input line 187.
+(pdftex.def)             Requested size: 178.8678pt x 142.26532pt.
+<imgs/Training_loss3.png, id=106, 462.528pt x 346.896pt>
+File: imgs/Training_loss3.png Graphic file (type png)
+<use imgs/Training_loss3.png>
+Package pdftex.def Info: imgs/Training_loss3.png  used on input line 194.
+(pdftex.def)             Requested size: 178.8678pt x 142.26532pt.
+<imgs/Average_accuracy.png, id=107, 462.528pt x 346.896pt>
+File: imgs/Average_accuracy.png Graphic file (type png)
+<use imgs/Average_accuracy.png>
+Package pdftex.def Info: imgs/Average_accuracy.png  used on input line 204.
+(pdftex.def)             Requested size: 178.8678pt x 142.26532pt.
+
+Underfull \hbox (badness 2435) in paragraph at lines 205--205
+[]\OT1/cmr/m/n/10 Figure 8: []Average Ac-cu-racy dur-ing
+ []
+
+<imgs/Total_accuracy.png, id=108, 462.528pt x 346.896pt>
+File: imgs/Total_accuracy.png Graphic file (type png)
+<use imgs/Total_accuracy.png>
+Package pdftex.def Info: imgs/Total_accuracy.png  used on input line 211.
+(pdftex.def)             Requested size: 178.8678pt x 142.26532pt.
+[5 <./imgs/long_train_loss.png> <./imgs/short_train_loss.png> <./imgs/Validatio
+n_loss3.png> <./imgs/Training_loss3.png> <./imgs/Average_accuracy.png> <./imgs/
+Total_accuracy.png>] [6]
 No file main.bbl.
-[3] (./main.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  F3903E1D23D07DE64DEBDB03C6429E74;1091.
+[7] (./main.aux)
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 40143C1A69C7F1815A5ABA87EEE145F7;1341.
  ) 
 Here is how much of TeX's memory you used:
- 21725 strings out of 480247
- 403557 string characters out of 5896151
- 683452 words of memory out of 5000000
- 39286 multiletter control sequences out of 15000+600000
- 476031 words of font info for 53 fonts, out of 8000000 for 9000
+ 23650 strings out of 480247
+ 429663 string characters out of 5896151
+ 890473 words of memory out of 5000000
+ 41150 multiletter control sequences out of 15000+600000
+ 477730 words of font info for 61 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 83i,6n,80p,497b,342s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 83i,8n,80p,791b,1315s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on main.pdf (3 pages, 69466 bytes).
+Output written on main.pdf (7 pages, 325103 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 163 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
+ 36 named destinations out of 1000 (max. 500000)
+ 156 words of extra memory for PDF output out of 10000 (max. 10000000)
 
