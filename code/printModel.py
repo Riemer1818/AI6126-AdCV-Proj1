@@ -1,5 +1,6 @@
 import torch
 from transformers import ViTForImageClassification
+from torchsummary import summary
 
 import torch.nn as nn
 
@@ -44,7 +45,7 @@ class MultiTaskPretrained(nn.Module):
         for param in self.pretrained.parameters():
             param.requires_grad = False
 
-        # Unfreeze the last 'layers_to_unfreeze' transformer blocks
+        # Unfreeze the last 'layers_to_unfreeze' transforpimer blocks
         if layers_to_unfreeze > 0:
             for layer in self.pretrained.vit.encoder.layer[-layers_to_unfreeze:]:
                 for param in layer.parameters():
@@ -63,7 +64,8 @@ class MultiTaskPretrained(nn.Module):
 if __name__ == '__main__':
     num_subattributes = [7, 3, 3, 4, 6, 3]
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    print("Using", device)
+    # print("Using", device)
 
     model = MultiTaskPretrained(layers_to_unfreeze=1, dropout_rate=0.2)
-    print(model)
+    
+    summary(model, input_size=(3, 224, 224))

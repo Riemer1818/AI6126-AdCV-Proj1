@@ -13,7 +13,8 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage{tcolorbox}
 \usepackage{textcomp}
-\usepackage{listings}  % still doesnt work...? 
+\usepackage{listings} 
+
 
 \colorlet{LightGray}{White!90!Periwinkle}
 \colorlet{LightOrange}{Orange!15}
@@ -143,24 +144,24 @@ The model employs a pre-trained Vision Transformer (ViTForImageClassification) a
 
 \section{Results}
 
-figure \ref{fig:TrainingLoss} shows the training loss during training, while figure~\ref{fig:ShortTrainLoss} illustrates the model training with a high learning rate. This exploration methods indicated that a more optimal solution would be somewhere in the middle. As can be seen in the training loss graph in figure~\ref{fig:TrainingLoss} the training is smooth up to this point but seems to stagnate. The full training sets can be found in~\ref{tab:model_parameters}. Where I have employed crossing to quickly pinpoint optimal parameters. 
+figure~\ref{fig:TrainingLoss} shows the training loss during training, while figure~\ref{fig:ShortTrainLoss} illustrates the model training with a high learning rate. This exploration methods indicated that a more optimal solution would be somewhere in the middle. As can be seen in the training loss graph in figure~\ref{fig:TrainingLoss} the training is smooth up to this point but seems to stagnate. The full training sets can be found in~\ref{tab:model_parameters}. Where I have employed crossing to quickly pinpoint optimal parameters. 
 
 From this I conclude that my loss function is not able to accuracy project the loss. This is also visible in the validation loss graph in figure~\ref{fig:ValidationLoss}. The validation loss is not decreasing as expected. This is a clear indication that the model is not learning as expected.
 
 \begin{table}[ht]
     \centering
-    \begin{tabular}{cccccc}
-    \hline
-    \textbf{Layers Unfrozen} & \textbf{Epochs} & \textbf{Learning Rate} & \textbf{Dropout Rate} & \textbf{Average Class Accuracy} & \textbf{Total Accuracy} \\
-    \hline
-    1 & 10 & 0.0031 & 0.22 & 0.23 & 0.52 \\
-    1 & 20 & 0.00031 & 0.22 & 0.58 & 0.75 \\
-    1 & 20 & 0.00031 & 0.3 & 0.56 & 0.72 \\
-    1 & 20 & 0.0004 & 0.22 & 0.54 & 0.72 \\
-    1 & 50 & 0.000031 & 0.22 & 0.54 & 0.6 \\
-    \hline
+    \begin{tabular}{ccccc}
+        \hline
+        \textbf{Epochs} & \textbf{Learning Rate} & \textbf{Dropout Rate} & \textbf{Average Class Accuracy} & \textbf{Total Accuracy} \\
+        \hline
+        10 & 0.0031 & 0.22 & 0.23 & 0.52 \\
+        20 & 0.00031 & 0.22 & 0.58 & 0.75 \\
+        20 & 0.00031 & 0.3 & 0.56 & 0.72 \\
+        20 & 0.0004 & 0.22 & 0.54 & 0.72 \\
+        50 & 0.000031 & 0.22 & 0.54 & 0.6 \\
+        \hline
     \end{tabular}
-    \caption{Model Training Parameters: Layers Unfrozen, Epochs, Learning Rate, Dropout Rate, Average Class Accuracy, Total Accuracy. Batch Size: 32}
+    \caption{Model Training Parameters: Layers Unfrozen: 1, Epochs, Learning Rate, Dropout Rate, Average Class Accuracy, Total Accuracy. Batch Size: 32}
     \label{tab:model_parameters}
 \end{table}
 
@@ -169,7 +170,7 @@ From this I conclude that my loss function is not able to accuracy project the l
     \begin{minipage}[b]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth, height=5cm]{imgs/long_train_loss.png}
-        \caption{Here the model is trained over 50 epochs with low learning rate. The image shows the loss during training. }
+        \caption{Here the model is trained over 50 epochs with low learning rate. The image shows the loss during training.}
         \label{fig:LongTrainLoss}
     \end{minipage}
     \hfill
@@ -228,111 +229,46 @@ Despite the suboptimal performance, the model achieved a final test score of 0.5
 
 In conclusion, the current model's performance falls short of expectations. The limitations of the chosen ViT model and the lack of computational resources hindered the ability to achieve optimal results. Further research and experimentation are necessary to overcome these challenges and improve the model's performance. 
 
-To reproduce the results please have a look at the code in the \href{finalRunner}{}
+To reproduce the results please have a look at the code in the \href{https://github.com/Riemer1818/AI6126-AdCV-Proj1/blob/main/code/finalRunner.ipynb}{finalRunner} and generally at the \href{https://github.com/Riemer1818/AI6126-AdCV-Proj1/}{github repository}. The model weights for the best performing model can be found under \texttt{./content/models/1\_20\_32\_0.00031\_0.22/1\_20\_32\_0.00031\_0.22\_best\_model.pth}
+
 
 \newpage
-\section{Bibliography}
 
+\section{References}
+\bibliographystyle{IEEEtran}
+\bibliography{References.bib}
+
+\itemize{
+    \item Hugging Face - \href{https://huggingface.co/google/vit-base-patch16-224-in21k}{ViT Model}
+    \item Optuna - \href{https://optuna.org/}{Optuna}
+    \item ChatGPT - \href{https://www.openai.com/chatgpt/}{ChatGPT}
+    \item Co-pilot - \href{https://copilot.github.com}{Co-pilot}
+}
 
 \section{Appendix}
 
-
-\begin{figure}[H]
+\begin{figure}[ht]
     \centering
-    \begin{minipage}[b]{\textwidth}
-        \begin{lstlisting}[caption={model architecture}, label={lst:appendix_code}, basicstyle=\small\small\ttfamily]
-        MultiTaskPretrained(
-            (pretrained): ViTForImageClassification(
-                (vit): ViTModel(
-                    (embeddings): ViTEmbeddings(
-                        (patch_embeddings): ViTPatchEmbeddings(
-                            (projection): Conv2d(3, 768, kernel_size=(16, 16), stride=(16, 16))
-                        )
-                        (dropout): Dropout(p=0.0, inplace=False)
-                    )
-                    (encoder): ViTEncoder(
-                        (layer): ModuleList(
-                            (0-11): 12 x ViTLayer(
-                                (attention): ViTAttention(
-                                    (attention): ViTSelfAttention(
-                                        (query): Linear(in_features=768, out_features=768, bias=True)
-                                        (key): Linear(in_features=768, out_features=768, bias=True)
-                                        (value): Linear(in_features=768, out_features=768, bias=True)
-                                        (dropout): Dropout(p=0.0, inplace=False)
-                                    )
-                                    (output): ViTSelfOutput(
-                                        (dense): Linear(in_features=768, out_features=768, bias=True)
-                                        (dropout): Dropout(p=0.0, inplace=False)
-                                    )
-                                )
-                                (intermediate): ViTIntermediate(
-                                    (dense): Linear(in_features=768, out_features=3072, bias=True)
-                                    (intermediate_act_fn): GELUActivation()
-                                )
-                                (output): ViTOutput(
-                                    (dense): Linear(in_features=3072, out_features=768, bias=True)
-                                    (dropout): Dropout(p=0.0, inplace=False)
-                                )
-                                (layernorm_before): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                                (layernorm_after): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                            )
-                        )
-                    )
-                    (layernorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                )
-                (classifier): MultiTaskHead(
-                    (shared_layers): Sequential(
-                        (0): Linear(in_features=768, out_features=1024, bias=True)
-                        (1): Dropout(p=0.2, inplace=False)
-                        (2): ReLU()
-                        (3): Linear(in_features=1024, out_features=1024, bias=True)
-                        (4): Dropout(p=0.2, inplace=False)
-                        (5): ReLU()
-                        (6): Linear(in_features=1024, out_features=1024, bias=True)
-                        (7): Dropout(p=0.2, inplace=False)
-                        (8): ReLU()
-                    )
-                    (task_layers): ModuleList(
-                        (0): Linear(in_features=1024, out_features=7, bias=True)
-                        (1-2): 2 x Linear(in_features=1024, out_features=3, bias=True)
-                        (3): Linear(in_features=1024, out_features=4, bias=True)
-                        (4): Linear(in_features=1024, out_features=6, bias=True)
-                        (5): Linear(in_features=1024, out_features=3, bias=True)
-                    )
-                )
-            )
-        )
-        \end{lstlisting}
-    \end{minipage}
-    \caption{Model architecture}
+    \begin{lstlisting}[language=TeX]
+======================================================================
+Layer (type:depth-idx)                        Param #
+======================================================================
+->ViTForImageClassification: 1-1              --
+|    ->ViTModel: 2-1                          --
+|    |    ->ViTEmbeddings: 3-1                (742,656)
+|    |    ->ViTEncoder: 3-2                   (85,054,464)
+|    |    ->LayerNorm: 3-3                    (1,536)
+|    ->MultiTaskHead: 2-2                     --
+|    |    ->Sequential: 3-4                   2,886,656
+|    |    ->ModuleList: 3-5                   26,650
+======================================================================
+Total params: 88,711,962
+Trainable params: 2,913,306
+Non-trainable params: 85,798,656
+======================================================================
+    \end{lstlisting}
+    \caption{Code snippet representing the layer structure of the ViT model.}
     \label{app:model}
 \end{figure}
 
-
-\bibliographystyle{IEEEtran}
-\bibliography{References.bib}
-no external sources have been used that need to be cited. 
-
 \end{document}
-
-% \begin{theorem}
-%     This is a theorem.
-% \end{theorem}
-
-% \begin{proposition}
-%     This is a proposition.
-% \end{proposition}
-
-% \begin{principle}
-%     This is a principle.
-% \end{principle}
-
-% Maybe I need to add one more part: Examples.
-% Set style and color later.
-
-
-% \subsection{Citation}
-
-% This is a citation\cite{Eg}.
-
-% \newpage
