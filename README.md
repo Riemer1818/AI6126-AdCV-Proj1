@@ -6,6 +6,9 @@ CodaLab username: Riemerpi001
 
 ## description of the files.
 
+Report 
+[Report](main.pdf)
+
 File used to run the models. 
 [finalRunner](code/finalRunner.ipynb)
 
