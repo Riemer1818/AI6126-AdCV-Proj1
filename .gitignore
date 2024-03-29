@@ -10,3 +10,8 @@ build/
 
 # Ignore everything within ./content
 /content/*
+# ignore vscode
+.vscode/
+main.out 
+main.log 
+main.aux

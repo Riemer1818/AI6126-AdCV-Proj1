@@ -93,9 +93,8 @@ Fashion Attributes Classification Challenge dataset comprises 6,000 images, thou
     \label{fig:four_images}
 \end{figure}
 
-\href{./code/finalCode.py}{The code} used to train the model can be found in the code folder.
 
-The dataset is regularized with a simple transformer as can be seen in the code in [the Python code](./code/finalCode.py) and in code block~\ref{fig:transform_code}. Where a RandomVerticalFlip is added to increase the number of datapoints, but no RandomHorizontalFlip is added as this is not representative of the test set. 
+The dataset is regularized with a simple transformer as can be seen in the code in \href{https://github.com/Riemer1818/AI6126-AdCV-Proj1/blob/main/code/finalCode.py}{The code} and in code block~\ref{fig:transform_code}. Where a RandomVerticalFlip is added to increase the number of datapoints, but no RandomHorizontalFlip is added as this is not representative of the test set. 
 
 \begin{figure}[ht]
     \centering
@@ -136,10 +135,11 @@ The Vision Transformer (ViT) model marks a paradigm shift from traditional convo
 
 \subsubsection{MultiTaskHead}
 
-At the heart of our model lies the MultiTaskHead module, engineered to concurrently predict multiple attribute labels. This functionality is vital for the Fashion Attributes Classification Challenge, ensuring the model's efficiency and efficacy in multi-label classification. The module's architecture, integrated within a pre-trained ViT framework, demonstrates a robust approach to handling the intricacies of fashion attribute classification.
+At the heart of our model lies the MultiTaskHead module, engineered to concurrently predict multiple attribute labels. This functionality is vital for the Fashion Attributes Classification Challenge, ensuring the model's efficiency and efficacy in multi-label classification. The module's architecture, integrated within a pre-trained ViT framework, demonstrates a robust approach to handling the intricacies of fashion attribute classification. The printed model can be seen in the appendix~\ref{app:model}.
 
 \subsubsection{Model Architecture}
 The model employs a pre-trained Vision Transformer (ViTForImageClassification) as its backbone, featuring an intricate network of embeddings, encoders, and a MultiTaskHead for classification. The encoder, composed of 12 transformer layers, processes sequences of image patches through a series of self-attention mechanisms and feed forward networks. This is followed by a MultiTaskHead classifier, which includes shared layers for general feature processing and task-specific layers designed to output predictions for each attribute category. The structure and parameterization of this model underscore its potential to capture and interpret the complex patterns inherent in fashion imagery, providing a detailed and nuanced understanding of fashion attributes. 
+
 
 \section{Results}
 
@@ -149,18 +149,18 @@ From this I conclude that my loss function is not able to accuracy project the l
 
 \begin{table}[ht]
     \centering
-    \begin{tabular}{ccccccc}
+    \begin{tabular}{cccccc}
     \hline
-    \textbf{Layers Unfrozen} & \textbf{Epochs} & \textbf{Batch Size} & \textbf{Learning Rate} & \textbf{Dropout Rate} & \textbf{Average Class Accuracy} & \textbf{Total Accuracy} \\
+    \textbf{Layers Unfrozen} & \textbf{Epochs} & \textbf{Learning Rate} & \textbf{Dropout Rate} & \textbf{Average Class Accuracy} & \textbf{Total Accuracy} \\
     \hline
-    1 & 10 & 32 & 0.0031 & 0.22 & 0.23 & 0.52 \\
-    1 & 20 & 32 & 0.00031 & 0.22 & 0.58 & 0.75 \\
-    1 & 20 & 32 & 0.00031 & 0.3 & 0.56 & 0.72 \\
-    1 & 20 & 32 & 0.0004 & 0.22 & 0.54 & 0.72 \\
-    1 & 50 & 32 & 0.000031 & 0.22 & 0.54 & 0.6 \\
+    1 & 10 & 0.0031 & 0.22 & 0.23 & 0.52 \\
+    1 & 20 & 0.00031 & 0.22 & 0.58 & 0.75 \\
+    1 & 20 & 0.00031 & 0.3 & 0.56 & 0.72 \\
+    1 & 20 & 0.0004 & 0.22 & 0.54 & 0.72 \\
+    1 & 50 & 0.000031 & 0.22 & 0.54 & 0.6 \\
     \hline
     \end{tabular}
-    \caption{Model Training Parameters}
+    \caption{Model Training Parameters: Layers Unfrozen, Epochs, Learning Rate, Dropout Rate, Average Class Accuracy, Total Accuracy. Batch Size: 32}
     \label{tab:model_parameters}
 \end{table}
 
@@ -226,10 +226,87 @@ Further investigation is required to determine the optimal parameters for the mo
 
 Despite the suboptimal performance, the model achieved a final test score of 0.57721. The model was unable to express the data better and trials with optimizers such as \href{https://optuna.org/}{Optuna} did not yield better results (not shown in report).
 
-In conclusion, the current model's performance falls short of expectations. The limitations of the chosen ViT model and the lack of computational resources hindered the ability to achieve optimal results. Further research and experimentation are necessary to overcome these challenges and improve the model's performance.
+In conclusion, the current model's performance falls short of expectations. The limitations of the chosen ViT model and the lack of computational resources hindered the ability to achieve optimal results. Further research and experimentation are necessary to overcome these challenges and improve the model's performance. 
+
+To reproduce the results please have a look at the code in the \href{finalRunner}{}
 
 \newpage
 \section{Bibliography}
+
+
+\section{Appendix}
+
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[b]{\textwidth}
+        \begin{lstlisting}[caption={model architecture}, label={lst:appendix_code}, basicstyle=\small\small\ttfamily]
+        MultiTaskPretrained(
+            (pretrained): ViTForImageClassification(
+                (vit): ViTModel(
+                    (embeddings): ViTEmbeddings(
+                        (patch_embeddings): ViTPatchEmbeddings(
+                            (projection): Conv2d(3, 768, kernel_size=(16, 16), stride=(16, 16))
+                        )
+                        (dropout): Dropout(p=0.0, inplace=False)
+                    )
+                    (encoder): ViTEncoder(
+                        (layer): ModuleList(
+                            (0-11): 12 x ViTLayer(
+                                (attention): ViTAttention(
+                                    (attention): ViTSelfAttention(
+                                        (query): Linear(in_features=768, out_features=768, bias=True)
+                                        (key): Linear(in_features=768, out_features=768, bias=True)
+                                        (value): Linear(in_features=768, out_features=768, bias=True)
+                                        (dropout): Dropout(p=0.0, inplace=False)
+                                    )
+                                    (output): ViTSelfOutput(
+                                        (dense): Linear(in_features=768, out_features=768, bias=True)
+                                        (dropout): Dropout(p=0.0, inplace=False)
+                                    )
+                                )
+                                (intermediate): ViTIntermediate(
+                                    (dense): Linear(in_features=768, out_features=3072, bias=True)
+                                    (intermediate_act_fn): GELUActivation()
+                                )
+                                (output): ViTOutput(
+                                    (dense): Linear(in_features=3072, out_features=768, bias=True)
+                                    (dropout): Dropout(p=0.0, inplace=False)
+                                )
+                                (layernorm_before): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                                (layernorm_after): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                            )
+                        )
+                    )
+                    (layernorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                )
+                (classifier): MultiTaskHead(
+                    (shared_layers): Sequential(
+                        (0): Linear(in_features=768, out_features=1024, bias=True)
+                        (1): Dropout(p=0.2, inplace=False)
+                        (2): ReLU()
+                        (3): Linear(in_features=1024, out_features=1024, bias=True)
+                        (4): Dropout(p=0.2, inplace=False)
+                        (5): ReLU()
+                        (6): Linear(in_features=1024, out_features=1024, bias=True)
+                        (7): Dropout(p=0.2, inplace=False)
+                        (8): ReLU()
+                    )
+                    (task_layers): ModuleList(
+                        (0): Linear(in_features=1024, out_features=7, bias=True)
+                        (1-2): 2 x Linear(in_features=1024, out_features=3, bias=True)
+                        (3): Linear(in_features=1024, out_features=4, bias=True)
+                        (4): Linear(in_features=1024, out_features=6, bias=True)
+                        (5): Linear(in_features=1024, out_features=3, bias=True)
+                    )
+                )
+            )
+        )
+        \end{lstlisting}
+    \end{minipage}
+    \caption{Model architecture}
+    \label{app:model}
+\end{figure}
 
 
 \bibliographystyle{IEEEtran}

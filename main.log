@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.19)  29 MAR 2024 18:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.19)  29 MAR 2024 18:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -788,106 +788,219 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<imgs/00000.jpg, id=60, 200.75pt x 301.125pt>
+<imgs/00000.jpg, id=64, 200.75pt x 301.125pt>
 File: imgs/00000.jpg Graphic file (type jpg)
 <use imgs/00000.jpg>
 Package pdftex.def Info: imgs/00000.jpg  used on input line 75.
 (pdftex.def)             Requested size: 79.49577pt x 119.24402pt.
-<imgs/00001.jpg, id=61, 301.125pt x 251.94125pt>
+<imgs/00001.jpg, id=65, 301.125pt x 251.94125pt>
 File: imgs/00001.jpg Graphic file (type jpg)
 <use imgs/00001.jpg>
 Package pdftex.def Info: imgs/00001.jpg  used on input line 80.
 (pdftex.def)             Requested size: 79.49577pt x 66.51038pt.
-<imgs/00002.jpg, id=62, 236.885pt x 301.125pt>
+<imgs/00002.jpg, id=66, 236.885pt x 301.125pt>
 File: imgs/00002.jpg Graphic file (type jpg)
 <use imgs/00002.jpg>
 Package pdftex.def Info: imgs/00002.jpg  used on input line 85.
 (pdftex.def)             Requested size: 79.49577pt x 101.05324pt.
-<imgs/00003.jpg, id=63, 199.74625pt x 302.12875pt>
+<imgs/00003.jpg, id=67, 199.74625pt x 302.12875pt>
 File: imgs/00003.jpg Graphic file (type jpg)
 <use imgs/00003.jpg>
 Package pdftex.def Info: imgs/00003.jpg  used on input line 90.
 (pdftex.def)             Requested size: 79.49577pt x 120.24081pt.
 
-Overfull \hbox (25.4602pt too wide) in paragraph at lines 96--98
-\OT1/cmr/m/n/10 ized with a sim-ple trans-former as can be seen in the code in 
-[the Python code](./code/finalCode.py)
- []
-
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) [2 <./imgs/00000.jpg> <./imgs/00001.jpg> <./imgs/00002.jpg> <./imgs/00003.jpg
 >]
-<imgs/distribution.png, id=82, 462.528pt x 346.896pt>
+<imgs/distribution.png, id=87, 462.528pt x 346.896pt>
 File: imgs/distribution.png Graphic file (type png)
 <use imgs/distribution.png>
 Package pdftex.def Info: imgs/distribution.png  used on input line 118.
 (pdftex.def)             Requested size: 317.9892pt x 238.50099pt.
  [3 <./imgs/distribution.png>]
-Overfull \hbox (199.2678pt too wide) in paragraph at lines 151--162
+Overfull \hbox (134.04587pt too wide) in paragraph at lines 152--163
  [][] 
  []
 
-<imgs/long_train_loss.png, id=95, 462.528pt x 346.896pt>
+<imgs/long_train_loss.png, id=101, 462.528pt x 346.896pt>
 File: imgs/long_train_loss.png Graphic file (type png)
 <use imgs/long_train_loss.png>
-Package pdftex.def Info: imgs/long_train_loss.png  used on input line 170.
+Package pdftex.def Info: imgs/long_train_loss.png  used on input line 171.
 (pdftex.def)             Requested size: 178.8678pt x 142.26532pt.
-<imgs/short_train_loss.png, id=96, 462.528pt x 346.896pt>
+<imgs/short_train_loss.png, id=102, 462.528pt x 346.896pt>
 File: imgs/short_train_loss.png Graphic file (type png)
 <use imgs/short_train_loss.png>
-Package pdftex.def Info: imgs/short_train_loss.png  used on input line 177.
+Package pdftex.def Info: imgs/short_train_loss.png  used on input line 178.
 (pdftex.def)             Requested size: 178.8678pt x 142.26532pt.
 [4]
-<imgs/Validation_loss3.png, id=105, 462.528pt x 346.896pt>
+<imgs/Validation_loss3.png, id=112, 462.528pt x 346.896pt>
 File: imgs/Validation_loss3.png Graphic file (type png)
 <use imgs/Validation_loss3.png>
-Package pdftex.def Info: imgs/Validation_loss3.png  used on input line 187.
+Package pdftex.def Info: imgs/Validation_loss3.png  used on input line 188.
 (pdftex.def)             Requested size: 178.8678pt x 142.26532pt.
-<imgs/Training_loss3.png, id=106, 462.528pt x 346.896pt>
+<imgs/Training_loss3.png, id=113, 462.528pt x 346.896pt>
 File: imgs/Training_loss3.png Graphic file (type png)
 <use imgs/Training_loss3.png>
-Package pdftex.def Info: imgs/Training_loss3.png  used on input line 194.
+Package pdftex.def Info: imgs/Training_loss3.png  used on input line 195.
 (pdftex.def)             Requested size: 178.8678pt x 142.26532pt.
-<imgs/Average_accuracy.png, id=107, 462.528pt x 346.896pt>
+<imgs/Average_accuracy.png, id=114, 462.528pt x 346.896pt>
 File: imgs/Average_accuracy.png Graphic file (type png)
 <use imgs/Average_accuracy.png>
-Package pdftex.def Info: imgs/Average_accuracy.png  used on input line 204.
+Package pdftex.def Info: imgs/Average_accuracy.png  used on input line 205.
 (pdftex.def)             Requested size: 178.8678pt x 142.26532pt.
 
-Underfull \hbox (badness 2435) in paragraph at lines 205--205
+Underfull \hbox (badness 2435) in paragraph at lines 206--206
 []\OT1/cmr/m/n/10 Figure 8: []Average Ac-cu-racy dur-ing
  []
 
-<imgs/Total_accuracy.png, id=108, 462.528pt x 346.896pt>
+<imgs/Total_accuracy.png, id=115, 462.528pt x 346.896pt>
 File: imgs/Total_accuracy.png Graphic file (type png)
 <use imgs/Total_accuracy.png>
-Package pdftex.def Info: imgs/Total_accuracy.png  used on input line 211.
+Package pdftex.def Info: imgs/Total_accuracy.png  used on input line 212.
 (pdftex.def)             Requested size: 178.8678pt x 142.26532pt.
 [5 <./imgs/long_train_loss.png> <./imgs/short_train_loss.png> <./imgs/Validatio
 n_loss3.png> <./imgs/Training_loss3.png> <./imgs/Average_accuracy.png> <./imgs/
 Total_accuracy.png>] [6]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 241.
+
+Overfull \hbox (141.16339pt too wide) in paragraph at lines 247--248
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (175.18329pt too wide) in paragraph at lines 256--257
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (163.84332pt too wide) in paragraph at lines 257--258
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (175.18329pt too wide) in paragraph at lines 258--259
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (56.11365pt too wide) in paragraph at lines 259--260
+[][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (175.18329pt too wide) in paragraph at lines 262--263
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (56.11365pt too wide) in paragraph at lines 263--264
+[][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (158.17334pt too wide) in paragraph at lines 267--268
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (27.76373pt too wide) in paragraph at lines 268--269
+[][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (158.17334pt too wide) in paragraph at lines 271--272
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (33.43372pt too wide) in paragraph at lines 272--273
+[][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (197.86322pt too wide) in paragraph at lines 274--275
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (192.19324pt too wide) in paragraph at lines 275--276
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (90.13354pt too wide) in paragraph at lines 279--280
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (67.45361pt too wide) in paragraph at lines 283--284
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (73.1236pt too wide) in paragraph at lines 286--287
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (73.1236pt too wide) in paragraph at lines 289--290
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (56.11365pt too wide) in paragraph at lines 294--295
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (90.13354pt too wide) in paragraph at lines 295--296
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (56.11365pt too wide) in paragraph at lines 296--297
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (56.11365pt too wide) in paragraph at lines 297--298
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (56.11365pt too wide) in paragraph at lines 298--299
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+[7]
+Overfull \vbox (275.22227pt too high) has occurred while \output is active []
+
+
+[8]
 No file main.bbl.
-[7] (./main.aux)
+[9] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 40143C1A69C7F1815A5ABA87EEE145F7;1341.
+(rerunfilecheck)             Checksum: AD940FFF077DA169BDC1EE02C6AFE72D;1425.
  ) 
 Here is how much of TeX's memory you used:
- 23650 strings out of 480247
- 429663 string characters out of 5896151
- 890473 words of memory out of 5000000
- 41150 multiletter control sequences out of 15000+600000
- 477730 words of font info for 61 fonts, out of 8000000 for 9000
+ 23779 strings out of 480247
+ 431445 string characters out of 5896151
+ 952601 words of memory out of 5000000
+ 41211 multiletter control sequences out of 15000+600000
+ 478196 words of font info for 63 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  83i,8n,80p,791b,1315s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on main.pdf (7 pages, 325103 bytes).
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on main.pdf (9 pages, 346372 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
- 126 compressed objects within 2 object streams
- 36 named destinations out of 1000 (max. 500000)
- 156 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 260 PDF objects out of 1000 (max. 8388607)
+ 218 compressed objects within 3 object streams
+ 102 named destinations out of 1000 (max. 500000)
+ 164 words of extra memory for PDF output out of 10000 (max. 10000000)
 
