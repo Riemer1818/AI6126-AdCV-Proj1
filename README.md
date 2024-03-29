@@ -21,12 +21,12 @@ File containing distribution plot
 File containing general plot function
 [plot](code/plot.py)
 
+Best performing model
+[bestModel](content/models/1_20_32_0.00031_0.22/1_20_32_0.00031_0.22_best_model.pth)
 
 ## third party libraries
-I have used optuna during the initial exploration. 
+I have used Optuna during the initial exploration. 
 
 ## how to run the code
 can be found in the [finalRunner](code/finalRunner.ipynb) file.
-
-
 
